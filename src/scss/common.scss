@@ -1,0 +1,126 @@
+// Заголовки, общие БЄМ блоки и проче...
+
+h2 {
+  font-size: 2.4rem;
+
+  @media (min-width:$tablet){
+    font-size: 3.6rem;
+  }
+}
+
+//====================================================================================================
+
+								/* Define the keyframes for the ease-in-back animation */
+								@keyframes glasses {
+									0% {
+										fill: #F1B500;
+									}
+
+									25% {
+										fill: #006FBF;
+									}
+
+									50% {
+										fill: #FF00B8;
+									}
+
+									75% {
+										fill: #CB0909;
+									}
+
+									100% {
+										fill: #000000;
+									}
+
+								}
+
+								/* Apply the animation to the desired elements */
+								.animate-glasses {
+									animation: glasses 6000ms ease-in-out infinite;
+								}
+
+
+								/* Define the keyframes for the ease-in-back animation */
+								@keyframes glasses-glare {
+									0% {
+										fill: #000000;
+									}
+
+									75% {
+										fill: #000000;
+									}
+
+									100% {
+										fill: #ffffff;
+									}
+
+								}
+
+								/* Apply the animation to the desired elements */
+								.animate-glasses-glare {
+									animation: glasses-glare 6000ms ease-in-out infinite;
+								}
+
+
+								/* Define the keyframes for the ease-in-back animation */
+								@keyframes lips {
+									0% {
+										fill: #9B0000;
+									}
+
+									25% {
+										fill: #600062;
+									}
+
+									50% {
+										fill: #EDA600;
+									}
+
+									75% {
+										fill: #9B004A;
+									}
+
+									100% {
+										fill: #9B0000;
+									}
+								}
+
+								/* Apply the animation to the desired elements */
+								.animate-lips {
+									animation: lips 6000ms ease-in-out infinite;
+								}
+
+								/* Define the keyframes for the ease-in-back animation */
+								@keyframes question {
+									0% {
+										fill: #ffffff;
+									}
+
+									50% {
+										fill: #FA04B5;
+									}
+
+
+									100% {
+										fill: #600062;
+									}
+								}
+
+								/* Apply the animation to the desired elements */
+								.animate-question {
+									animation: question 3000ms ease-in-out infinite;
+								}
+
+//====================================================================================================
+
+
+
+//====================================================================================================
+
+
+
+//====================================================================================================
+
+
+
+//====================================================================================================

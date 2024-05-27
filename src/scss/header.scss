@@ -1,0 +1,209 @@
+.header {
+  padding-top: 25px;
+  padding-bottom: 25px;
+
+  @media (min-width:$tablet) {
+    padding-top: 50px;
+  }
+
+  // .header__container
+  &__container {}
+
+  // .header__wrapper
+
+  &__wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  // .header__logo
+
+  &__logo {}
+
+  // .header__menu
+
+  &__menu {}
+
+  // .header__phone
+
+  &__phone {
+    display: none;
+
+    @media (min-width:$pc) {
+      display: block;
+      width: 207px;
+      border: 1px solid #ffffff;
+      padding: 10px 6px;
+      text-align: center;
+      color: var(--main-text-color);
+    }
+  }
+
+  // .header__languages
+  &__languages {
+    position: absolute;
+    right: 0;
+    top: 100%;
+
+    @media (min-width:$pc) {
+      left: 50%;
+      top: -30px;
+      transform: translateX(-50%);
+      text-align: center;
+    }
+  }
+}
+
+
+.menu {
+
+  // .menu__icon
+  &__icon {}
+
+  // .menu__body
+  &__body {
+    @media (max-width:$pc) {
+      position: absolute;
+      top: 100%;
+      right: 0;
+      width: 200px;
+
+      border-radius: 10px;
+      padding: 20px;
+      background-color: hsla(0, 1%, 23%, 0.7);
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      pointer-events: none;
+      opacity: 0;
+      transform: translateY(10px);
+      transition: all 0.3s ease 0s;
+
+      .menu-open & {
+        transform: translateY(0px);
+        pointer-events: visible;
+        opacity: 1;
+        z-index: 11;
+      }
+    }
+  }
+
+  // .menu__list
+  &__list {
+
+    @media (min-width:$pc) {
+      display: flex;
+      gap: 30px;
+    }
+  }
+}
+
+.icon-menu {}
+
+.menu-item {}
+
+.languages {
+  display: inline-flex;
+  padding: 3px 3px;
+  border: 1px solid #fff;
+  border-radius: 3px;
+
+  @media (min-width:$tablet) {
+    padding: 9px 12px;
+    border-radius: 5px;
+    text-transform: uppercase;
+  }
+}
+
+.lang-item {}
+
+
+//====================================================================================================
+
+//====================================================================================================
+//Burger
+.burger {
+  display: none;
+
+  @media (max-width: $pc) {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 40px;
+    height: 40px;
+    padding: 5px;
+    cursor: pointer;
+    z-index: 35;
+
+    &__lines {
+      display: block;
+      width: 30px;
+      height: 100%;
+      position: relative;
+
+      &::before,
+      &::after {
+        content: "";
+      }
+
+      &::before,
+      &::after,
+      & span {
+        transition: all 0.3s ease 0s;
+        width: 100%;
+        right: 0px;
+        position: absolute;
+        height: 2px;
+        background-color: var(--light-color);
+        ;
+      }
+
+      &::before {
+        top: 0px;
+      }
+
+      &::after {
+        bottom: 0px;
+      }
+
+      span {
+        width: 20px;
+        top: calc(50% - 1px);
+      }
+
+      .menu-open & {
+        &::before {
+          transform: rotate(-45deg);
+          top: calc(50% - 1px);
+        }
+
+        &::after {
+          transform: rotate(45deg);
+          bottom: calc(50% - 1px);
+        }
+
+        span {
+          opacity: 0;
+        }
+      }
+    }
+  }
+}
+
+//====================================================================================================
+
+
+
+//====================================================================================================
+
+
+
+//====================================================================================================
+
+
+
+//====================================================================================================
